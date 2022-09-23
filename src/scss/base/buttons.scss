@@ -1,0 +1,37 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  height: 71px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #FFFFFF;
+  transition: 0.5s ease;
+  svg {
+    margin-left: 16px;
+    transition: 0.5s ease;
+  }
+  &:hover {
+    opacity: 0.9;
+    svg {
+      transform: translateX(11px);
+    }
+  }
+  &:active {
+    svg {
+      transform: translateX(16px);
+    }
+  }
+  &-dark {
+    background: #292F36;
+    border: 2px solid #292F36;
+  }
+  &-light {
+    background: #CDA274;
+    border: 2px solid #CDA274;
+    box-shadow: 1px 0px 18px rgba(0, 0, 0, 0.2);
+  }
+}

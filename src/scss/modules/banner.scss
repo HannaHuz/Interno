@@ -1,0 +1,48 @@
+.banner {
+  background-image: url('@img/bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 100px 0;
+  @media(min-width:992px){
+    background-size: 100% 100%;
+    padding: 170px 0;
+  }
+  @media(min-width:1200px){
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media(min-width:1200px){
+      height:100vh;
+    }
+  }
+  .main-title {
+    margin-bottom: 19px;
+  }
+  &-text {
+    font-size: 22px;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 1.5s ease, opacity 1.5s ease;
+  }
+  .btn {
+    width: 207px;
+    margin-top: 35px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 1.75s ease, opacity 1.75s ease;
+  }
+
+  &-active {
+    .main-title,
+    .banner-text,
+    .btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

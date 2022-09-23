@@ -1,0 +1,29 @@
+.testimonials{
+  &-wrap {
+    background: #F4F0EC;
+    border-radius: 70px;
+    padding: 40px 20px;
+    @media(min-width:768px){
+      padding: 103px 50px;
+    }
+  }
+  &-title {
+    margin-bottom: 20px;
+    @media(min-width:768px){
+      margin-bottom: 45px;
+    }
+    &:before {
+      background: #F4F0EC;
+    }
+  }
+}
+
+.anim-active {
+  .testimonials {
+    &-title {
+      &:before{
+        left: 100%;
+      }
+    }
+  }
+}

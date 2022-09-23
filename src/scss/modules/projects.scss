@@ -1,0 +1,102 @@
+.projects {
+  &-title {
+    margin-bottom: 20px;
+  }
+  &-text {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 22px;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -100%; top: 0;
+      width: 200%;
+      height: 100%;
+      transition: left 1.5s ease 0.25s;
+      display: block;
+      background:#F5F5F5;
+    }
+    @media(min-width: 768px) {
+      margin-bottom: 70px;
+    }
+  }
+  &-wrap {
+    @media(min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &-item {
+    margin-bottom: 60px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    @media(min-width: 768px) {
+      flex: 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+    h3 {
+      font-family: $font-bold;
+      font-size: 18px;
+      line-height: 1.5;
+      letter-spacing: 0.22px;
+      color: #292F36;
+      @media(min-width: 1200px) {
+        font-size: 25px;
+      }
+    }
+    h4 {
+      color: #4D5053;
+      text-align-last: left;
+    }
+  }
+  @for $i from 1 to 10{
+    &-item:nth-of-type(#{$i}) { transition-delay: $i * 0.25s; }
+  }
+  &-descr {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    align-items: center;
+  }
+  &-btn {
+    display: block;
+    background: #F4F0EC;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    position: relative;
+    @media(min-width: 992px) {
+      width: 70px;
+      height: 70px;
+    }
+    &:hover {
+      background: #CDA274;
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.anim-active {
+  .projects {
+    &-title,
+    &-text {
+      &:before{
+        left: 100%;
+      }
+    }
+    &-item {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.partners {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+    @media(min-width:768px){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media(min-width:1200px){
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 100px;
+    }
+  }
+  &-logo {
+    display: block;
+    margin: auto;
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translate(-50px);
+  }
+
+  @for $i from 1 to 10{
+    &-logo:nth-child(#{$i}) { transition-delay: $i * 0.25s; }
+  }
+}
+
+.anim-active {
+  .partners {
+    &-logo {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
