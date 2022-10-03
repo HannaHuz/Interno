@@ -356,7 +356,7 @@ section {
   height: 18px;
   cursor: pointer;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .menu .burger {
     display: none;
   }
@@ -394,7 +394,7 @@ section {
   transform: rotate(45deg) translate(0px, 50%);
   background-color: #CDA274;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .menu-body {
     position: fixed;
     top: -100%;
@@ -416,7 +416,7 @@ section {
   display: flex;
   align-items: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .menu-list {
     justify-content: center;
     height: 100vh;
@@ -429,7 +429,7 @@ section {
   text-align: center;
   position: relative;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .menu li {
     width: inherit;
     margin: 0 20px;
@@ -449,7 +449,7 @@ section {
   height: 3px;
   transition: 0.5s ease;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .menu li:hover::after {
     width: 100%;
   }
@@ -467,7 +467,7 @@ section {
   cursor: pointer;
   font-size: 24px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .menu-link {
     font-size: 19px;
   }

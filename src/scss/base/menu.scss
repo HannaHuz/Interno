@@ -6,7 +6,7 @@
     width: 30px;
     height: 18px;
     cursor: pointer;
-    @media(min-width:768px){
+    @media(min-width:992px){
       display: none;
     }
     span,
@@ -48,7 +48,7 @@
     }
   }
   &-body {
-    @media(max-width:767px){
+    @media(max-width:991px){
       position: fixed;
       top: -100%;
       left: 0;
@@ -68,7 +68,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-    @media(max-width:767px){
+    @media(max-width:991px){
       justify-content: center;
       height: 100vh;
       flex-direction: column;
@@ -79,7 +79,7 @@
     margin-bottom: 20px;
     text-align: center;
     position: relative;
-    @media(min-width:768px){
+    @media(min-width:992px){
       width: inherit;
       margin: 0 20px;
     }
@@ -98,7 +98,7 @@
       transition: 0.5s ease;
     }
     &:hover::after{
-      @media(min-width:768px){
+      @media(min-width:992px){
         width: 100%;
       }
     }
@@ -115,7 +115,7 @@
     transition: 0.5s ease;
     cursor: pointer;
     font-size: 24px;
-    @media(min-width:768px){
+    @media(min-width:992px){
       font-size: 19px;
     }
     &:hover,
